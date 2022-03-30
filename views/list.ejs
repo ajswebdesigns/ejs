@@ -10,26 +10,26 @@
 </head>
 
 <body>
-  <h1>
-    <%= kindOfDay %>
-  </h1>
-  <section>
-    <h2>Enter an item</h2>
-    <form action="/" method="POST">
-      <input type="text" name="newItem" placeholder="add item">
-      <button type="submit">Add</button>
-    </form>
-  </section>
-  <ul>
+  <div class="box" id="heading">
+    <h1>
+      <%= kindOfDay %>
+    </h1>
+  </div>
+
+  <div class="box">
     <%for(let i=0; i<newListItems.length; i++){%>
-      <li>
-        <%=newListItems[i]%>
-      </li>
+      <div class="item">
+        <input type="checkbox">
+        <p>
+          <%=newListItems[i]%>
+        </p>
+      </div>
       <%}%>
-
-        </li>
-  </ul>
+        <form class="item" action="/" method="POST">
+          <input type="text" name="newItem" placeholder="New Item">
+          <button type="submit">+</button>
+        </form>
+  </div>
 </body>
-
 
 </html>
