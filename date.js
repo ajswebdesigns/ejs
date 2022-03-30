@@ -7,8 +7,8 @@ let today = new Date();
     day: 'numeric',
     month: 'long'
   };
-let day = today.toLocaleDateString('en-US', options)
-return day;
+return today.toLocaleDateString('en-US', options)
+
 }
 
 
@@ -20,7 +20,7 @@ let today = new Date();
     weekday: 'long',
    
   };
-let day = today.toLocaleDateString('en-US', options)
-return day;
+return today.toLocaleDateString('en-US', options)
+
 }
 console.log(module.exports)
