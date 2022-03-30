@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const date = require(__dirname + '/date.js')
+
 const app = express()
 
 
@@ -11,7 +12,7 @@ app.use(express.static('public'))
 items = []
 workItems = []
 app.get('/', (req, res)=>{
-  let day = date()
+  let day = date.getDate()
   res.render('list', {listTitle: day, newListItems: items});
 })
 
